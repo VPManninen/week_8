@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/Display"
+        android:layout_width="211dp"
+        android:layout_height="95dp"
+        android:text="*Bottle Dispenser*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.885" />
+
+    <Button
+        android:id="@+id/AddMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addSelected"
+        android:text="Add"
+        app:layout_constraintBottom_toTopOf="@+id/RetMoney"
+        app:layout_constraintEnd_toStartOf="@+id/moneyAmount"
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyBottle"
+        app:layout_constraintVertical_bias="0.833" />
+
+    <Button
+        android:id="@+id/RetMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="returnAll"
+        android:text="Return"
+        app:layout_constraintBottom_toTopOf="@+id/Display"
+        app:layout_constraintEnd_toStartOf="@+id/moneyAmount"
+        app:layout_constraintHorizontal_bias="0.698"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyBottle"
+        app:layout_constraintVertical_bias="0.726" />
+
+    <Button
+        android:id="@+id/buyBottle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="buyBottle"
+        android:text="Buy Selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.215"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.308" />
+
+    <SeekBar
+        android:id="@+id/moneyAmount"
+        android:layout_width="198dp"
+        android:layout_height="37dp"
+        android:max="20"
+        android:min="0"
+        android:orientation="vertical"
+        android:rotation="-90"
+        app:layout_constraintBottom_toTopOf="@+id/Display"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moneyView"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <TextView
+        android:id="@+id/moneyView"
+        android:layout_width="54dp"
+        android:layout_height="35dp"
+        android:text="0,00 €"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toEndOf="@+id/buyBottle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321" />
+
+    <TextView
+        android:id="@+id/addAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0.00 €"
+        app:layout_constraintBottom_toTopOf="@+id/moneyAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintStart_toEndOf="@+id/AddMoney"
+        app:layout_constraintTop_toBottomOf="@+id/moneyView"
+        app:layout_constraintVertical_bias="0.669" />
+
+    <Spinner
+        android:id="@+id/size"
+        android:layout_width="89dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/buyBottle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.512" />
+
+    <Spinner
+        android:id="@+id/type"
+        android:layout_width="194dp"
+        android:layout_height="47dp"
+        app:layout_constraintBottom_toTopOf="@+id/buyBottle"
+        app:layout_constraintEnd_toStartOf="@+id/size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
